@@ -12,12 +12,6 @@ const { user, setUser} = useContext(UserContext);
 const seller_id = localStorage.getItem("sellerID");
 
 
-
-
-
-
-
-
   const fetchSellerList = () => {
     axiosWithAuth()
     //to get all users list
@@ -40,17 +34,9 @@ const seller_id = localStorage.getItem("sellerID");
 
   return (
     <div>
- 
-
-    
-    
-
-   
-    <>
-    
+      <>
         <SellerListCard sellerList={user} fetchSellerList={fetchSellerList} />
-
-    </>
+      </>
     </div>
   );
 };

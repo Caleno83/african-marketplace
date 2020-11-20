@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import axiosWithAuth from "../utils/axiosWithAuth";
-import { useHistory } from "react-router-dom";
-import styled from "styled-components";
-import market from "../img/market.jpg"
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import axiosWithAuth from '../utils/axiosWithAuth';
+import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
+import market from '../img/market.jpg';
 
 const SignUpContainer = styled.div`
 display: flex;
@@ -106,8 +106,6 @@ textarea {
     background-color: lightgray;
   }
 }
-
-
 }
 
 .register {
@@ -120,16 +118,16 @@ textarea {
 `;
 
 const defaultFormState = {
-  email: "",
-  password: "",
-  comfirmpassword: "",
-  full_name: "",
+  email: '',
+  password: '',
+  comfirmpassword: '',
+  full_name: '',
 };
 
 let reg = {
-  email: "",
-  password: "",
-  full_name: "",
+  email: '',
+  password: '',
+  full_name: '',
 };
 
 const CustomerSignup = () => {
@@ -154,10 +152,10 @@ const CustomerSignup = () => {
     };
     console.log(reg, formState);
     axiosWithAuth()
-      .post("/customers/register", reg)
+      .post('/customers/register', reg)
       .then((res) => {
         console.log(res);
-        history.push("/customerLogin");
+        history.push('/customerLogin');
       })
       .catch((err) => console.log(err));
     console.log(formState);
@@ -165,7 +163,9 @@ const CustomerSignup = () => {
   return (
     <SignUpContainer>
       <form onSubmit={handleSumbmit} className="childrenDiv">
-        <h1>Customer <hr></hr> Sign Up Now!</h1>
+        <h1>
+          Customer <hr /> Sign Up Now!
+        </h1>
         <label>
           <input
             type="text"
@@ -205,7 +205,9 @@ const CustomerSignup = () => {
         <button type="submit"> Submit </button>
         <button type="cancel"> Cancel </button>
         <div className="new-account">
-          <Link className= "register" to="/customerLogin">Have an customer account?</Link>
+          <Link className="register" to="/customerLogin">
+            Have an customer account?
+          </Link>
         </div>
       </form>
     </SignUpContainer>

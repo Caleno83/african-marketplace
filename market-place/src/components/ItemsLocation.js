@@ -39,18 +39,10 @@ const ItemsLocation = () => {
 
   return (
   <div>
- 
     <>
     <Header>
            <h1>ITEMS BY LOCATION</h1>
            </Header>
-           
-     
-   
-         
-
-     
-
       <ol>
         {itemsList.map((item) => (
           <ItemsLocationCard
@@ -61,7 +53,6 @@ const ItemsLocation = () => {
             item_description={item.item_description}
             item_price={item.item_price}
             item_category={item.item_category}
-            
             url_item={item.url_item}
             added_at={item.added_at}
             full_name={item.full_name}
@@ -71,8 +62,6 @@ const ItemsLocation = () => {
       </ol>
     </>
     </div>
-    
-
   );
 };
 

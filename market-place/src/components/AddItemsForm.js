@@ -30,16 +30,11 @@ const AddItemsForm = () => {
 
     return (
         <>
-   
-
-    
         <div>
             <ItemsAddCard items={itemsList} fetchItems={fetchItems} />
 
-    
         </div>
-       
-        </>
+       </>
     )
 };
 

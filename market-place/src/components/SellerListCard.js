@@ -59,7 +59,6 @@ const UserWrapper = styled.div`
 
   .childrenDiv {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,12 +93,10 @@ const UserWrapper = styled.div`
     outline: none;
     border: 0;
     margin: 0;
-
     text-align: center;
     font-size: 20px;
     margin-top: -90px;
-   
-    width: 200px;
+   width: 200px;
     height: 50px;
     transition: all 0.9s;
     background-color: transparent;

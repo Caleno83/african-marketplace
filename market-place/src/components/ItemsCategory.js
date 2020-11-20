@@ -11,22 +11,14 @@ h1 {
     margin: 90px 0 0 555px;
   padding: 20px 0 -50px 0;
     color: darkgreen;
-    
 }
-
 `
-
-
 
 
 const ItemsCategory = () => {
   const [itemsList, setItemsList] = useState([]);
 
   
-
-
-
-
   useEffect(() => {
     axiosWithAuth()
       .get("/category/search")
@@ -45,11 +37,7 @@ const ItemsCategory = () => {
            <h1>ITEMS BY CATEGORY</h1>
            </Header>
     <>
-     
-
-     
-
-      <ol>
+     <ol>
         {itemsList.map((item) => (
           <ItemsCategoryCard
             key={item.id}

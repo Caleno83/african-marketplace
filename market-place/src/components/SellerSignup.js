@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import axiosWithAuth from "../utils/axiosWithAuth";
-import { useHistory } from "react-router-dom";
-import styled from "styled-components";
-import market from "../img/market.jpg"
-
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import axiosWithAuth from '../utils/axiosWithAuth';
+import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
+import market from '../img/market.jpg';
 
 const SignUpContainer = styled.div`
 display: flex;
@@ -18,16 +17,10 @@ font-size: 30px;
 box-sizing: border-box;
 padding-top: -80px;
 background-image: url(${market});
-  background-size: cover;
-
-  background-repeat: no-repeat;
- 
-  background-size: cover;
-  overflow: scroll;
-  background-repeat: no-repeat;
-  background-position: center;
-
-
+background-size: cover;
+background-repeat: no-repeat;
+overflow: scroll;
+background-position: center;
 
 
 h1 {
@@ -63,10 +56,7 @@ h1 {
   margin-right: 40%;
   width: 400px;
   padding-top:170px;
- 
   margin-top: 10px;
-
-  
   height: 750px;
   border: 5px solid black;
   border-radius: 20px;
@@ -108,7 +98,6 @@ textarea {
   }
 }
 
-
 }
 
 .register {
@@ -121,16 +110,16 @@ textarea {
 `;
 
 const defaultFormState = {
-  email: "",
-  password: "",
-  comfirmpassword: "",
-  full_name: "",
+  email: '',
+  password: '',
+  comfirmpassword: '',
+  full_name: '',
 };
 
 let reg = {
-  email: "",
-  password: "",
-  full_name: "",
+  email: '',
+  password: '',
+  full_name: '',
 };
 
 const SellerSignup = () => {
@@ -155,10 +144,10 @@ const SellerSignup = () => {
     };
     console.log(reg, formState);
     axiosWithAuth()
-      .post("/sellers/register", reg)
+      .post('/sellers/register', reg)
       .then((res) => {
         console.log(res);
-        history.push("/sellerLogin");
+        history.push('/sellerLogin');
       })
       .catch((err) => console.log(err));
     console.log(formState);
@@ -166,7 +155,9 @@ const SellerSignup = () => {
   return (
     <SignUpContainer>
       <form onSubmit={handleSumbmit} className="childrenDiv">
-        <h1>Seller <hr></hr> Sign Up Now!</h1>
+        <h1>
+          Seller <hr /> Sign Up Now!
+        </h1>
         <label>
           <input
             type="text"
@@ -206,7 +197,9 @@ const SellerSignup = () => {
         <button type="submit"> Submit </button>
         <button type="cancel"> Cancel </button>
         <div className="new-account">
-          <Link  className = "register" to="/sellerLogin">Have an seller account?</Link>
+          <Link className="register" to="/sellerLogin">
+            Have an seller account?
+          </Link>
         </div>
       </form>
     </SignUpContainer>

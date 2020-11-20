@@ -16,7 +16,6 @@ const UserWrapper = styled.div`
   font-size: 30px;
   box-sizing: border-box;
   margin-top: 100px;
-
   span {
     color: darkgreen;
   }
@@ -95,12 +94,10 @@ const UserWrapper = styled.div`
     outline: none;
     border: 0;
     margin: 0;
-
     text-align: center;
     font-size: 20px;
     margin-top: -90px;
-   
-    width: 200px;
+   width: 200px;
     height: 50px;
     transition: all 0.9s;
     background-color: transparent;

@@ -11,7 +11,6 @@ justify-content: space-around;
 margin: 50px 0 -90px 10px;
 padding-left: 60px;
 button {
-
   margin: 50px 5px 1px 0;
   width: 240px;
   height: 30px;
@@ -49,8 +48,7 @@ const ItemsWrapper = styled.div`
 
   hr.rounded {
     margin: 70px 0 20px 30px;
-   
-    border-top: 3px solid darkolivegreen;
+   border-top: 3px solid darkolivegreen;
     border-radius: 5px;
     width: 1200px;
   
@@ -87,7 +85,6 @@ const ItemsWrapper = styled.div`
 
   .childrenDiv {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,10 +102,6 @@ const SellerItemsPage = () => {
   const [itemsList, setItemsList] = useState([]);
 
   
-
-
-
-
   useEffect(() => {
     axiosWithAuth()
       .get("/items")
@@ -143,9 +136,6 @@ const SellerItemsPage = () => {
     
     <ItemsWrapper>
      
-
-     
-
       <ol>
         {itemsList.map((item) => (
           <ItemsCard

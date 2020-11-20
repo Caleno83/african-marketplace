@@ -16,19 +16,15 @@ const ItemsWrapper = styled.div`
   box-sizing: border-box;
   margin-top: 100px;
 
- 
-
   span {
     color: darkgreen;
   }
 
   hr.rounded {
     margin: 70px 0 20px -30px;
-   
-    border-top: 3px solid darkolivegreen;
+   border-top: 3px solid darkolivegreen;
     border-radius: 5px;
     width: 1300px;
-  
   }
 
   h1 {
@@ -102,11 +98,9 @@ const ItemsLocationCard = (props) => {
       <div>
         <p><span>Category: </span>{props.item_category}</p>
       </div>
-      
       <div>
       <img src={props.url_item} alt={props.item_name} />
       </div>
-      
       <div>
         <p><span>Buyer: </span>{props.full_name}</p>
       </div>

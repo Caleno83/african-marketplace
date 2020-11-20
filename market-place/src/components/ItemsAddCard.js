@@ -112,11 +112,11 @@ const ItemsAddCard = ({ items, fetchItems }) => {
       .catch((err) => console.log("NewItems data error is:", err.message));
     setNewItem({
       item_name: "",
-    item_description: "",
-    item_price: "",
-    item_category: "",
-    item_location: "",
-    url_item: ""
+      item_description: "",
+      item_price: "",
+      item_category: "",
+      item_location: "",
+      url_item: ""
     });
   };
 

@@ -29,8 +29,7 @@ const id = localStorage.getItem("customerID");
 
   return (
     <>
- 
-        <CustomerCard user={user} fetchCustomer={fetchCustomer} />
+      <CustomerCard user={user} fetchCustomer={fetchCustomer} />
     </>
   );
 };
