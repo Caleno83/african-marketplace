@@ -47,7 +47,6 @@ const ItemsWrapper = styled.div`
         font-size: 25px;
         padding-bottom: 30px;
       }
-      
     }
   }
 
@@ -57,7 +56,6 @@ const ItemsWrapper = styled.div`
 
   .childrenDiv {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,7 +76,6 @@ const ItemsWrapper = styled.div`
     font-size: 20px;
     color: black;
     outline: none;
-
   }
 
   label,
@@ -87,12 +84,10 @@ const ItemsWrapper = styled.div`
     outline: none;
     border: 0;
     margin: 0;
-
     text-align: center;
     font-size: 20px;
     margin-top: -90px;
-   
-    width: 200px;
+   width: 200px;
     height: 50px;
     transition: all 0.9s;
     background-color: transparent;
@@ -129,7 +124,6 @@ const ItemsCard = (props) => {
       <div>
       <img src={props.url_item} alt={props.item_name} />
       </div>
-      
       <div>
         <p><span>Buyer: </span>{props.full_name}</p>
       </div>

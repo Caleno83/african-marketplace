@@ -10,8 +10,6 @@ const id = localStorage.getItem("customerID");
 
   const fetchCustomer = () => {
     axiosWithAuth()
-    //to get all users list
-      // .get('users')
       .get(`/customers/${id}`)
       .then((res) => {
         console.log("This is the fetchCustomer response", res.data);
@@ -29,8 +27,7 @@ const id = localStorage.getItem("customerID");
 
   return (
     <>
- 
-        <CustomerCard user={user} fetchCustomer={fetchCustomer} />
+      <CustomerCard user={user} fetchCustomer={fetchCustomer} />
     </>
   );
 };

@@ -5,23 +5,14 @@ import SellerListCard from "./SellerListCard";
 import { UserContext } from "../context/UserContext";
 
 
-
 const sellerItemsList = () => {
 // eslint-disable-next-line react-hooks/rules-of-hooks
-const { user, setUser} = useContext(UserContext);
-const seller_id = localStorage.getItem("sellerID");
-
-
-
-
-
-
-
+  const { user, setUser} = useContext(UserContext);
+  const seller_id = localStorage.getItem("sellerID");
 
   const fetchSellerList = () => {
     axiosWithAuth()
-    //to get all users list
-      // .get('users')
+
       .get(`/sellers/${seller_id}/items`)
       .then((res) => {
         console.log("This is the fetchSellerList response", res.data);
@@ -40,17 +31,9 @@ const seller_id = localStorage.getItem("sellerID");
 
   return (
     <div>
- 
-
-    
-    
-
-   
-    <>
-    
+      <>
         <SellerListCard sellerList={user} fetchSellerList={fetchSellerList} />
-
-    </>
+      </>
     </div>
   );
 };

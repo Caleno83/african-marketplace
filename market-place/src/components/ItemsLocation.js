@@ -7,23 +7,13 @@ const Header = styled.div`
 
 h1 {
     margin: 90px 0 0 546px;
-  padding: 20px 0 -50px 0;
+    padding: 20px 0 -50px 0;
     color: darkgreen;
-    
-}
-
+  }
 `
-
-
-
 
 const ItemsLocation = () => {
   const [itemsList, setItemsList] = useState([]);
-
-  
-
-
-
 
   useEffect(() => {
     axiosWithAuth()
@@ -42,16 +32,10 @@ const ItemsLocation = () => {
  
     <>
     <Header>
-           <h1>ITEMS BY LOCATION</h1>
-           </Header>
+        <h1>ITEMS BY LOCATION</h1>
+    </Header>
            
-     
-   
-         
-
-     
-
-      <ol>
+     <ol>
         {itemsList.map((item) => (
           <ItemsLocationCard
             key={item.id}
@@ -61,7 +45,6 @@ const ItemsLocation = () => {
             item_description={item.item_description}
             item_price={item.item_price}
             item_category={item.item_category}
-            
             url_item={item.url_item}
             added_at={item.added_at}
             full_name={item.full_name}
@@ -71,8 +54,6 @@ const ItemsLocation = () => {
       </ol>
     </>
     </div>
-    
-
   );
 };
 

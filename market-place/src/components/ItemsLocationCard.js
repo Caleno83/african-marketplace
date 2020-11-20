@@ -15,20 +15,16 @@ const ItemsWrapper = styled.div`
   font-size: 30px;
   box-sizing: border-box;
   margin-top: 100px;
-
- 
-
+  
   span {
     color: darkgreen;
   }
 
   hr.rounded {
     margin: 70px 0 20px -30px;
-   
-    border-top: 3px solid darkolivegreen;
+   border-top: 3px solid darkolivegreen;
     border-radius: 5px;
     width: 1300px;
-  
   }
 
   h1 {
@@ -52,7 +48,6 @@ const ItemsWrapper = styled.div`
         font-size: 25px;
         padding-bottom: 30px;
       }
-      
     }
   }
 
@@ -62,7 +57,6 @@ const ItemsWrapper = styled.div`
 
   .childrenDiv {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,7 +67,6 @@ const ItemsWrapper = styled.div`
     width: auto;
     height: 400px;
   }
-
 `;
 
 
@@ -81,7 +74,6 @@ const ItemsWrapper = styled.div`
 const ItemsLocationCard = (props) => {
   return (
       <>
-    
     <ItemsWrapper>
         <div className="info" >
     <div >
@@ -102,11 +94,9 @@ const ItemsLocationCard = (props) => {
       <div>
         <p><span>Category: </span>{props.item_category}</p>
       </div>
-      
       <div>
       <img src={props.url_item} alt={props.item_name} />
       </div>
-      
       <div>
         <p><span>Buyer: </span>{props.full_name}</p>
       </div>

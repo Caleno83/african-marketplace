@@ -8,12 +8,9 @@ const NavContainer = styled.div`
     padding-left: 219px;
     align-items: center;
     width: 1148px;
-    
-  
     background-color: darkolivegreen;
  
-
-    h1 {
+   h1 {
         color: black;
         font-size: 1.5rem;
         font-weight: 500;
@@ -22,7 +19,6 @@ const NavContainer = styled.div`
         margin: 2rem;
     }
     .nav {
-
         display: flex;
         margin: 20px;
         
@@ -39,8 +35,7 @@ const NavContainer = styled.div`
         
         a.active{
           color: black;
-         
-      }
+        }
    }
    .logout {
      color: red;
@@ -53,9 +48,6 @@ const Header = () => {
   const { auth } = useContext(AuthContext);
 
   const {go, push } = useHistory();
-
-
-
 
   return (
     <NavContainer>
@@ -71,7 +63,7 @@ const Header = () => {
           go(0)
           }}>Logout</Link>}
 
-{!localStorage.getItem('customerID') ? <NavLink className="link" activeClassName="active" to="/customerLogin">
+        {!localStorage.getItem('customerID') ? <NavLink className="link" activeClassName="active" to="/customerLogin">
           Customer
         </NavLink> : <Link className="logout" onClick={() => { 
           localStorage.clear()
@@ -81,15 +73,13 @@ const Header = () => {
           }}>Logout</Link>}
   
 
-{!localStorage.getItem('sellerID') ? <NavLink className="link" activeClassName="active" to="/customerItemsPage">
+        {!localStorage.getItem('sellerID') ? <NavLink className="link" activeClassName="active" to="/customerItemsPage">
           Home
         </NavLink> : <NavLink className="link" activeClassName="active" to="/sellerItemsPage">
           Home
         </NavLink>}
 
-
-      
-        {/* <NavLink to="/items">Home</NavLink> */}
+      {/* <NavLink to="/items">Home</NavLink> */}
       </div>
       <h1>{auth.message}</h1>
       {console.log("succesmsg", auth.message)}

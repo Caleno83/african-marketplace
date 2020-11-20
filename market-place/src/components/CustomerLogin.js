@@ -110,7 +110,6 @@ const CustomerLogin = () => {
         </label>
         <label htmlFor="password">
           <input
-            //create the hide and show password from this link https://github.com/zakangelle/react-password-mask
             type="password"
             name="password"
             onChange={handleChange}
@@ -150,17 +149,10 @@ font-size: 30px;
 box-sizing: border-box;
 padding-top: -80px;
 background-image: url(${market});
-  background-size: cover;
-
-  background-repeat: no-repeat;
- 
-  background-size: cover;
-  overflow: scroll;
-  background-repeat: no-repeat;
-  background-position: center;
-
-
-
+background-size: cover;
+background-repeat: no-repeat;
+overflow: scroll;
+background-position: center;
 
 h1 {
   text-align: center;
@@ -186,7 +178,6 @@ h1 {
 
 .childrenDiv {
   box-sizing: border-box;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,10 +187,6 @@ h1 {
   margin-right: 40%;
   width: 400px;
   padding-top:170px;
- 
- 
-
-  
   height: 580px;
   border: 5px solid black;
   border-radius: 20px;
@@ -240,8 +227,6 @@ textarea {
     background-color: lightgray;
   }
 }
-
-
 }
 
 .register {

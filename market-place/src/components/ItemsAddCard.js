@@ -28,7 +28,6 @@ const PlantsCardWrapper = styled.div`
 
   .childrenDiv {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,11 +111,11 @@ const ItemsAddCard = ({ items, fetchItems }) => {
       .catch((err) => console.log("NewItems data error is:", err.message));
     setNewItem({
       item_name: "",
-    item_description: "",
-    item_price: "",
-    item_category: "",
-    item_location: "",
-    url_item: ""
+      item_description: "",
+      item_price: "",
+      item_category: "",
+      item_location: "",
+      url_item: ""
     });
   };
 
@@ -156,7 +155,7 @@ const ItemsAddCard = ({ items, fetchItems }) => {
           value={newItem.item_category || ""}
         />
 
-<input
+        <input
           type="text"
           name="item_location"
           onChange={handleChanger}
@@ -164,7 +163,7 @@ const ItemsAddCard = ({ items, fetchItems }) => {
           value={newItem.item_location || ""}
         />
 
-<input
+        <input
           type="text"
           name="url_item"
           onChange={handleChanger}

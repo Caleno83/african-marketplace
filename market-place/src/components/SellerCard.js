@@ -95,12 +95,10 @@ const UserWrapper = styled.div`
     outline: none;
     border: 0;
     margin: 0;
-
     text-align: center;
     font-size: 20px;
     margin-top: -90px;
-   
-    width: 200px;
+   width: 200px;
     height: 50px;
     transition: all 0.9s;
     background-color: transparent;
@@ -140,7 +138,6 @@ const SellerCard = ({ user, fetchSeller }) => {
       .put(`/sellers/${sellerToEdit.id}`, sellerToEdit)
       .then((res) => {
         console.log("This is the updateSeller Response", res);
-        // setUser(res.data);
         fetchSeller();
         history.push("/sellerInfo");
       })
@@ -151,10 +148,9 @@ const SellerCard = ({ user, fetchSeller }) => {
 
   const deleteSeller= (info) => {
     axiosWithAuth()
-      .delete(`/sellers/${info.id}`) //This is for the delete for user
+      .delete(`/sellers/${info.id}`) 
       .then((res) => {
         console.log("This is the deleteSeller Response", res);
-        // setUser(res.data);
         history.push("/sellerLogin");
         localStorage.removeItem("token")
         localStorage.removeItem("sellerID")
@@ -231,7 +227,6 @@ const SellerCard = ({ user, fetchSeller }) => {
                 {user.password}
               </p>
             
-
               <button onClick={() => editSeller(user)}>Update</button>
               <button
                 onClick={(e) => {

@@ -11,8 +11,6 @@ const id = localStorage.getItem("sellerID");
 
   const fetchSeller = () => {
     axiosWithAuth()
-    //to get all users list
-      // .get('users')
       .get(`/sellers/${id}`)
       .then((res) => {
         console.log("This is the fetchSeller response", res.data);
@@ -30,9 +28,7 @@ const id = localStorage.getItem("sellerID");
 
   return (
     <>
-
-
-        <SellerCard user={user} fetchSeller={fetchSeller} />
+      <SellerCard user={user} fetchSeller={fetchSeller} />
     </>
   );
 };

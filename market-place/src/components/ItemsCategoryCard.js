@@ -15,19 +15,15 @@ const ItemsWrapper = styled.div`
   box-sizing: border-box;
   margin-top: 100px;
 
- 
-
-  span {
+ span {
     color: darkgreen;
   }
 
   hr.rounded {
     margin: 70px 0 20px -30px;
-   
     border-top: 3px solid darkolivegreen;
     border-radius: 5px;
     width: 1300px;
-  
   }
 
   h1 {
@@ -51,7 +47,6 @@ const ItemsWrapper = styled.div`
         font-size: 25px;
         padding-bottom: 30px;
       }
-      
     }
   }
 
@@ -61,7 +56,6 @@ const ItemsWrapper = styled.div`
 
   .childrenDiv {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,7 +83,6 @@ const ItemsCategoryCard = (props) => {
       <div>
         <p><span>Category: </span>{props.item_category}</p>
       </div>
-      
       <div>
         <p><span>Item: </span>{props.item_name}</p>
       </div>
@@ -102,12 +95,9 @@ const ItemsCategoryCard = (props) => {
       <div>
         <p><span>Location:</span> {props.item_location}</p>
       </div>
-      
-      
       <div>
       <img src={props.url_item} alt={props.item_name} />
       </div>
-      
       <div>
         <p><span>Buyer: </span>{props.full_name}</p>
       </div>

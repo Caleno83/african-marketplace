@@ -32,29 +32,27 @@ function App() {
     <AppWrapper>
       
       <AuthContext.Provider value={{ auth, setAuth }}>
-        
-          <SellerContext.Provider value={{ sellerList, setSellerList}}>
-          <PlantsContext.Provider value={{ plantList, setPlantList }}>
-          <UserContext.Provider value={{ user, setUser }}>
-            <Header />
-            {/* Below Route is for the default URL */}
-             <Route exact path="/" component={SellerLogin} />
-            <PrivateRoute exact path="/sellerItemsPage" component={SellerItemsPage} />
-            <PrivateRoute exact path="/customerItemsPage" component={CustomerItemsPage} />
-            <Route exact path="/sellerLogin" component={SellerLogin} />
-            <Route path="/sellerSignup" component={SellerSignup} />
-            <Route exact path="/customerLogin" component={CustomerLogin} />
-            <Route path="/customerSignup" component={CustomerSignup} />
-            <PrivateRoute exact path="/sellerInfo" component={SellerForm} />
-            <PrivateRoute exact path="/customerInfo" component={CustomerForm} />
-            <PrivateRoute exact path="/itemsLocation" component={ItemsLocation} />
-            <PrivateRoute exact path="/itemsCategory" component={ItemsCategory} />
-            <PrivateRoute exact path="/sellerItemsList" component={SellerItemsList} />
-            <PrivateRoute path="/addItems" component={AddItemsForm} />
-            </UserContext.Provider>
-          </PlantsContext.Provider>
-          </SellerContext.Provider>
-        
+      <SellerContext.Provider value={{ sellerList, setSellerList}}>
+      <PlantsContext.Provider value={{ plantList, setPlantList }}>
+      <UserContext.Provider value={{ user, setUser }}>
+      <Header />
+      {/* Below Route is for the default URL */}
+      <Route exact path="/" component={SellerLogin} />
+      <PrivateRoute exact path="/sellerItemsPage" component={SellerItemsPage} />
+      <PrivateRoute exact path="/customerItemsPage" component={CustomerItemsPage} />
+      <Route exact path="/sellerLogin" component={SellerLogin} />
+      <Route path="/sellerSignup" component={SellerSignup} />
+      <Route exact path="/customerLogin" component={CustomerLogin} />
+      <Route path="/customerSignup" component={CustomerSignup} />
+      <PrivateRoute exact path="/sellerInfo" component={SellerForm} />
+      <PrivateRoute exact path="/customerInfo" component={CustomerForm} />
+      <PrivateRoute exact path="/itemsLocation" component={ItemsLocation} />
+      <PrivateRoute exact path="/itemsCategory" component={ItemsCategory} />
+      <PrivateRoute exact path="/sellerItemsList" component={SellerItemsList} />
+      <PrivateRoute path="/addItems" component={AddItemsForm} />
+      </UserContext.Provider>
+      </PlantsContext.Provider>
+      </SellerContext.Provider>
       </AuthContext.Provider>
      
     </AppWrapper>

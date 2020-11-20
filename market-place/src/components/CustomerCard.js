@@ -48,7 +48,6 @@ const UserWrapper = styled.div`
         font-size: 25px;
         padding-bottom: 30px;
       }
-      
     }
   }
 
@@ -140,7 +139,6 @@ const CustomerCard = ({ user, fetchCustomer }) => {
       .put(`/customers/${customerToEdit.id}`, customerToEdit)
       .then((res) => {
         console.log("This is the updateCustomer Response", res);
-        // setUser(res.data);
         fetchCustomer();
         history.push("/customerInfo");
       })
@@ -151,7 +149,7 @@ const CustomerCard = ({ user, fetchCustomer }) => {
 
   const deleteCustomer= (info) => {
     axiosWithAuth()
-      .delete(`/customers/${info.id}`) //This is for the delete for user
+      .delete(`/customers/${info.id}`) 
       .then((res) => {
         console.log("This is the deleteCustomer Response", res);
         // setUser(res.data);
@@ -219,7 +217,6 @@ const CustomerCard = ({ user, fetchCustomer }) => {
         <>
           <h1 id="main-title">Customer Profile</h1>
 
-
           <div className="info">
             <div>
               <p>
@@ -231,7 +228,6 @@ const CustomerCard = ({ user, fetchCustomer }) => {
                 {user.password}
               </p>
               
-
               <button onClick={() => editCustomer(user)}>Update</button>
               <button
                 onClick={(e) => {

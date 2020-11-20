@@ -49,11 +49,9 @@ const ItemsWrapper = styled.div`
 
   hr.rounded {
     margin: 70px 0 20px 30px;
-   
-    border-top: 3px solid darkolivegreen;
+   border-top: 3px solid darkolivegreen;
     border-radius: 5px;
     width: 1200px;
-  
   }
 
   h1 {
@@ -77,7 +75,6 @@ const ItemsWrapper = styled.div`
         font-size: 25px;
         padding-bottom: 30px;
       }
-      
     }
   }
 
@@ -87,7 +84,6 @@ const ItemsWrapper = styled.div`
 
   .childrenDiv {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,11 +99,6 @@ const ItemsWrapper = styled.div`
 
 const SellerItemsPage = () => {
   const [itemsList, setItemsList] = useState([]);
-
-  
-
-
-
 
   useEffect(() => {
     axiosWithAuth()
@@ -142,11 +133,7 @@ const SellerItemsPage = () => {
       </Button>
     
     <ItemsWrapper>
-     
-
-     
-
-      <ol>
+     <ol>
         {itemsList.map((item) => (
           <ItemsCard
             key={item.id}

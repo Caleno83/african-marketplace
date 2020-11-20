@@ -49,7 +49,6 @@ const UserWrapper = styled.div`
         font-size: 25px;
         padding-bottom: 30px;
       }
-      
     }
   }
 
@@ -59,7 +58,6 @@ const UserWrapper = styled.div`
 
   .childrenDiv {
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,11 +92,9 @@ const UserWrapper = styled.div`
     outline: none;
     border: 0;
     margin: 0;
-
     text-align: center;
     font-size: 20px;
     margin-top: -90px;
-   
     width: 200px;
     height: 50px;
     transition: all 0.9s;
@@ -154,7 +150,7 @@ const SellerListCard= ({ sellerList, fetchSellerList}) => {
 
   const deleteItem = (info) => {
     axiosWithAuth()
-      .delete(`/items/${info.id}`) //This is for the delete for user
+      .delete(`/items/${info.id}`)
       .then((res) => {
         console.log("This is the deleteItem Response", res);
         fetchSellerList()
@@ -279,8 +275,6 @@ const SellerListCard= ({ sellerList, fetchSellerList}) => {
         <>
           <h1 id="main-title">Your Items For Sell </h1>
 
-        {/* to get all users list */}
-
           <div className="info">
               {[...sellerList].reverse().map((u) => (
                 <div key={u.id}>
@@ -314,8 +308,8 @@ const SellerListCard= ({ sellerList, fetchSellerList}) => {
                   </p>
 
                   <div>
-      <img src={u.url_item} alt={u.item_name} />
-      </div>
+                    <img src={u.url_item} alt={u.item_name} />
+                  </div>
 
                   <button onClick={() => editItem(u)}>Update</button>
                   <button
@@ -332,8 +326,6 @@ const SellerListCard= ({ sellerList, fetchSellerList}) => {
           </div>
         </>
       )}
-
-         
 
     </UserWrapper>
   );

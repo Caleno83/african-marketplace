@@ -7,33 +7,27 @@ import market from "../img/market.jpg"
 
 
 const SignUpContainer = styled.div`
-display: flex;
-flex-direction: column;
-align-content: center;
-justify-content: center;
-justify-content: space-evenly;
-width: 100%;
-height: 940px;
-font-size: 30px;
-box-sizing: border-box;
-padding-top: -80px;
-background-image: url(${market});
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 940px;
+  font-size: 30px;
+  box-sizing: border-box;
+  padding-top: -80px;
+  background-image: url(${market});
   background-size: cover;
-
   background-repeat: no-repeat;
- 
   background-size: cover;
   overflow: scroll;
   background-repeat: no-repeat;
   background-position: center;
 
-
-
-
-h1 {
+  h1 {
   text-align: center;
   margin: -190px 0 20px 0;
-  
   font-size: 2.3rem;
   color: darkgreen;
 }
@@ -63,10 +57,7 @@ h1 {
   margin-right: 40%;
   width: 400px;
   padding-top:170px;
- 
   margin-top: 10px;
-
-  
   height: 750px;
   border: 5px solid black;
   border-radius: 20px;
@@ -107,8 +98,6 @@ textarea {
     background-color: lightgray;
   }
 }
-
-
 }
 
 .register {
