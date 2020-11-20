@@ -22,7 +22,7 @@ const ItemsWrapper = styled.div`
   }
 
   hr.rounded {
-    margin: 70px 0 20px 0;
+    margin: 70px 0 20px -30px;
    
     border-top: 3px solid darkolivegreen;
     border-radius: 5px;

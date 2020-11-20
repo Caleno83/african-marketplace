@@ -19,6 +19,7 @@ import SellerItemsList from "./components/SellerItemsList"
 import ItemsLocation from "./components/ItemsLocation"
 import ItemsCategory from "./components/ItemsCategory"
 
+
 import styled from "styled-components";
 
 function App() {
@@ -63,9 +64,6 @@ const AppWrapper = styled.div`
   margin: 0;
   width: 100%;
   height: 1000px;
- 
-  background-size: cover;
-  overflow: scroll;
   background-repeat: no-repeat;
   background-position: center;
   box-sizing: border-box;

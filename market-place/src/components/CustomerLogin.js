@@ -5,6 +5,7 @@ import { useHistory, Link } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { AuthContext } from "../context/AuthContext";
 import { useAlert } from 'react-alert'
+import market from "../img/market.jpg"
 
 
 const CustomerLogin = () => {
@@ -138,103 +139,118 @@ const CustomerLogin = () => {
 };
 
 const LoginWrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: center;
+justify-content: space-evenly;
+width: 100%;
+height: 940px;
+font-size: 30px;
+box-sizing: border-box;
+padding-top: -80px;
+background-image: url(${market});
+  background-size: cover;
+
+  background-repeat: no-repeat;
+ 
+  background-size: cover;
+  overflow: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+
+
+h1 {
+  text-align: center;
+  margin: -190px 0 20px 0;
+  
+  font-size: 2.3rem;
+  color: darkgreen;
+}
+
+.new-account {
+  margin-top: 20px;
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+  }
+}
+
+.error {
+  font-size: 0.9rem;
+  color: red;
+}
+
+.childrenDiv {
+  box-sizing: border-box;
+
   display: flex;
   flex-direction: column;
-  align-content: center;
   justify-content: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 200px;
-  font-size: 30px;
-  box-sizing: border-box;
-  margin-top: 200px;
+  align-items: center;
+  margin-top: -90px;
+  margin-left: 35.5%;
+  margin-right: 40%;
+  width: 400px;
+  padding-top:170px;
+ 
+ 
 
+  
+  height: 580px;
+  border: 5px solid black;
+  border-radius: 20px;
+  background-color: white;
+}
+button {
+  margin: 50px 5px 0 0;
+  width: 240px;
+  height: 30px;
+  background-color: darkolivegreen;
+  padding: 7px 0 30px 0;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  outline: none;
 
-
-  h1 {
-    text-align: center;
-    margin: 120px 0 1px 0;
-    font-size: 2.3rem;
-    color: darkgreen;
+  &:hover {
+    background-color: green;
   }
+}
 
-  p {
-    font-size: 1.5rem;
+input,
+textarea {
+  outline: none;
+  border: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  transition: all 0.9s;
+  background-color: transparent;
+
+  :focus {
+    border-bottom: 2px solid lightgray;
+    background-color: lightgray;
   }
+}
 
-  .new-account {
-    margin-top: 20px;
-    a {
-      text-decoration: none;
-      color: black;
-      padding-left: 41px;
-      font-size: 1.2rem;
-    }
+
+}
+
+.register {
+  margin-left: 23px;
+
+  &:hover {
+    color: green;
   }
-
-  .error {
-    font-size: 0.9rem;
-    color: red;
-  }
-
-  .childrenDiv {
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 40%;
-    margin-right: 40%;
-    width: auto;
-    height: 400px;
-  }
-  button {
-    margin: 50px 5px 0 0;
-    width: 240px;
-    height: 30px;
-    background-color: darkolivegreen;
-    padding: 7px 0 30px 0;
-    text-decoration: none;
-    text-align: center;
-    font-size: 20px;
-    color: black;
-    outline: none;
-
-    &:hover {
-      background-color: green;
-    }
-  }
-  #log {
-    margin-top: 10px;
-  }
-
-  input,
-  textarea {
-    outline: none;
-    border: 0;
-    margin: 0;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 20px;
-    width: 200px;
-    height: 50px;
-    transition: all 0.9s;
-    background-color: transparent;
-
-    :focus {
-      border-bottom: 2px solid lightgray;
-      background-color: lightgray;
-    }
-  }
-
-  .register {
-    margin-left: -45px;
-
-    &:hover {
-      color: green;
-    }
-  }
+}
 `;
 
 export default CustomerLogin;

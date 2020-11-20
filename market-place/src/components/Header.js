@@ -7,7 +7,8 @@ const NavContainer = styled.div`
     display: flex;
     padding-left: 219px;
     align-items: center;
-    width: 1200px;
+    width: 1148px;
+    
   
     background-color: darkolivegreen;
  

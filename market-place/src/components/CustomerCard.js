@@ -116,7 +116,6 @@ const initialCustomer = {
   id: "",
   email: "",
   password: "",
-  full_name: "",
 };
 
 const CustomerCard = ({ user, fetchCustomer }) => {
@@ -203,21 +202,7 @@ const CustomerCard = ({ user, fetchCustomer }) => {
               value={customerToEdit.password}
             />
           </label>
-          <label>
-            <span>Full Name:</span>
-            <input
-              type="text"
-              name="full_name"
-              onChange={(e) =>
-                setCustomerToEdit({
-                  ...customerToEdit,
-                  full_name: e.target.value,
-                })
-              }
-              placeholder="Full Name"
-              value={customerToEdit.full_name}
-            />
-          </label>
+        
           <div className="button-row">
             <button
               type="submit"
@@ -245,10 +230,7 @@ const CustomerCard = ({ user, fetchCustomer }) => {
                 <span>Password: </span>
                 {user.password}
               </p>
-              <p>
-                <span>Full Name: </span>
-                {user.full_name}
-              </p>
+              
 
               <button onClick={() => editCustomer(user)}>Update</button>
               <button
