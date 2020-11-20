@@ -38,6 +38,7 @@ function App() {
           <UserContext.Provider value={{ user, setUser }}>
             <Header />
             {/* Below Route is for the default URL */}
+             <Route exact path="/" component={SellerLogin} />
             <PrivateRoute exact path="/sellerItemsPage" component={SellerItemsPage} />
             <PrivateRoute exact path="/customerItemsPage" component={CustomerItemsPage} />
             <Route exact path="/sellerLogin" component={SellerLogin} />
