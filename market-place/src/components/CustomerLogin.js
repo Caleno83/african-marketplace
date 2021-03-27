@@ -143,7 +143,7 @@ flex-direction: column;
 align-content: center;
 justify-content: center;
 justify-content: space-evenly;
-width: 100%;
+width: 101.9%;
 height: 940px;
 font-size: 30px;
 box-sizing: border-box;
