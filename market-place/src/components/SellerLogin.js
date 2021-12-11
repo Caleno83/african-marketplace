@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
-import * as Yup from "yup";
 import { useHistory, Link } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { AuthContext } from "../context/AuthContext";
@@ -19,15 +18,8 @@ const SellerLogin = () => {
   };
 
   const [formState, setFormState] = useState(defaultState);
-  const [errors, setErrors] = useState({ ...defaultState, terms: "" });
   const { push } = useHistory();
 
-  //this is the formState schema
-
-  let formSchema = Yup.object().shape({
-    username: Yup.string().required("Please provide email."),
-    password: Yup.string().required("Please enter a correct Password"),
-  });
 
   //this is use for the onsubmit function
   const formSubmit = (e) => {
@@ -57,26 +49,6 @@ const SellerLogin = () => {
       });
   };
 
-  const validateChange = (e) => {
-    //this allows react to keep the event object to play nice with async op
-    e.persist();
-    // reach allows us to check a specific value of the schema
-    Yup.reach(formSchema, e.target.email)
-      .validate(e.target.value)
-      .then((res) =>
-        setErrors({
-          ...errors,
-          [e.target.email]: "",
-        })
-      )
-      .catch((error) =>
-        setErrors({
-          ...errors,
-          [e.target.email]: error.errors[0],
-        })
-      );
-  };
-
   // onChange function
   const handleChange = (e) => {
     //ternary operator to determine the form value
@@ -86,7 +58,6 @@ const SellerLogin = () => {
       ...formState,
       [e.target.name]: value,
     });
-    validateChange(e);
   };
 
   return (
@@ -101,12 +72,7 @@ const SellerLogin = () => {
             onChange={handleChange}
             value={formState.email}
             label="Email"
-            required
-            errors={errors}
           />
-          {errors.email.length !== 0 && (
-            <p className="error">{errors.email}</p>
-          )}
         </label>
         <label htmlFor="password">
           <input
@@ -116,12 +82,7 @@ const SellerLogin = () => {
             placeholder="Password"
             value={formState.password}
             label="Password"
-            required
-            errors={errors}
           />
-          {errors.password.length !== 0 && (
-            <p className="error">{errors.password}</p>
-          )}
         </label>
         <button type="submit" onClick={(e) => e.stopPropagation()}>
           SUBMIT
@@ -170,11 +131,6 @@ h1 {
     color: black;
     font-size: 1.2rem;
   }
-}
-
-.error {
-  font-size: 0.9rem;
-  color: red;
 }
 
 .childrenDiv {
