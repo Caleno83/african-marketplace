@@ -1,11 +1,11 @@
 import React, {  useContext } from 'react';
 import axiosWithAuth from "../utils/axiosWithAuth";
-import { PlantsContext } from '../context/PlantsContext';
+import { FormContext } from '../context/FormContext';
 import ItemsAddCard from "./ItemsAddCard";
 
 const AddItemsForm = () => {
   
-    const {itemsList, setItemsList} = useContext(PlantsContext)
+    const {itemsList, setItemsList} = useContext(FormContext)
 
     const fetchItems = () => {
         axiosWithAuth()

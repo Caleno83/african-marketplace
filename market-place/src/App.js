@@ -9,7 +9,7 @@ import CustomerItemsPage from "./components/CustomerItemsPage"
 import Header from "../src/components/Header";
 import { AuthContext } from "./context/AuthContext";
 import { SellerContext } from "./context/SellerContext";
-import { PlantsContext } from "./context/PlantsContext";
+import { FormContext } from "./context/FormContext";
 import { UserContext } from "./context/UserContext";
 import AddItemsForm from "./components/AddItemsForm";
 import SellerForm from "./components/SellerForm";
@@ -25,7 +25,7 @@ import styled from "styled-components";
 function App() {
   const [auth, setAuth] = useState([]);
   const [user, setUser] = useState([]);
-  const [plantList, setPlantList] = useState([]);
+  const [formList, setFormList] = useState([]);
   const [sellerList, setSellerList] = useState([])
 
   return (
@@ -33,7 +33,7 @@ function App() {
       
       <AuthContext.Provider value={{ auth, setAuth }}>
       <SellerContext.Provider value={{ sellerList, setSellerList}}>
-      <PlantsContext.Provider value={{ plantList, setPlantList }}>
+      <FormContext.Provider value={{ formList, setFormList }}>
       <UserContext.Provider value={{ user, setUser }}>
       <Header />
       {/* Below Route is for the default URL */}
@@ -51,7 +51,7 @@ function App() {
       <PrivateRoute exact path="/sellerItemsList" component={SellerItemsList} />
       <PrivateRoute path="/addItems" component={AddItemsForm} />
       </UserContext.Provider>
-      </PlantsContext.Provider>
+      </FormContext.Provider>
       </SellerContext.Provider>
       </AuthContext.Provider>
      

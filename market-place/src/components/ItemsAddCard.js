@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import styled from "styled-components";
 
-const PlantsCardWrapper = styled.div`
+const FormCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -120,7 +120,7 @@ const ItemsAddCard = ({ items, fetchItems }) => {
   };
 
   return (
-    <PlantsCardWrapper>
+    <FormCardWrapper>
       <h1>Please Add A New Item Info For Sell Here</h1>
       <form className="childrenDiv" onSubmit={handleSubmit}>
         <input
@@ -173,7 +173,7 @@ const ItemsAddCard = ({ items, fetchItems }) => {
 
         <button>Add A New Item</button>
       </form>
-    </PlantsCardWrapper>
+    </FormCardWrapper>
   );
 };
 
