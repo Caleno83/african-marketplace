@@ -112,13 +112,6 @@ textarea {
 const defaultFormState = {
   email: "",
   password: "",
-  comfirmpassword: "",
-  full_name: "",
-};
-
-let reg = {
-  email: "",
-  password: "",
   full_name: "",
 };
 
@@ -137,14 +130,9 @@ const SellerSignup = () => {
   };
   const handleSumbmit = (e) => {
     e.preventDefault();
-    reg = {
-      email: formState.email,
-      password: formState.password,
-      full_name: formState.full_name,
-    };
-    console.log(reg, formState);
+    console.log(formState);
     axiosWithAuth()
-      .post("/sellers/register", reg)
+      .post("/sellers/register", formState)
       .then((res) => {
         console.log(res);
         history.push("/sellerLogin");
