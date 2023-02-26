@@ -14,6 +14,7 @@ const AddItemsForm = () => {
             console.log("This is the fetchItems response", res);
              setItemsList(res.data);
         })
+        
         .catch(err => {
             console.log("This is the fetchItems error", err.message);
         })
